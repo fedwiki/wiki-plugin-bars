@@ -5,8 +5,6 @@
  * https://github.com/fedwiki/wiki-plugin-bars/blob/master/LICENSE.txt
  */
 
-// import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
-const observablePlot = import('https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm')
 
 function everyNth(data, n) {
   return data.filter((e, i, a) => {
@@ -15,7 +13,7 @@ function everyNth(data, n) {
 }
 
 async function emit($item, item) {
-  const Plot = await observablePlot
+  const Plot = await import('https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm')
 
   const data = everyNth(wiki.getData(), 5).map(x => x[1])
 

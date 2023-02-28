@@ -17,8 +17,6 @@ async function emit($item, item) {
 
   const data = everyNth(wiki.getData(), 5).map(x => x[1])
 
-  console.log({data})
-
   $item.append(Plot.plot({
     height: 260,
     width: 420,
